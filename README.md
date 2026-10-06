@@ -133,6 +133,14 @@ SupplyIQ/
 
 ## 6. Streamlit Portal:
 
+Lets test it : 
+Questions is : compare on-time delivery percentage by transport mode?
+
+<img width="1038" height="347" alt="image" src="https://github.com/user-attachments/assets/3362689e-8147-4d65-9ad3-0ddb1a46d4e2" />
+
+<img width="1013" height="141" alt="image" src="https://github.com/user-attachments/assets/86859022-9c72-4236-bb5a-ce2f14ba09c3" />
+
+
 
 
 
