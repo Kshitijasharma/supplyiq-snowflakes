@@ -99,7 +99,36 @@ SEMANTIC LAYER
 
 
 
-## 4. Project Folder
+## 4. Project Folder:
+
+```text
+SupplyIQ/
+│
+├── app/
+│   └── streamlit_app.py
+│
+├── sql/
+│   ├── 01_setup.sql
+│   ├── 02_curated_views.sql
+│   └── 03_metric_validation.sql
+│   └── 04_validate_metrices.sql
+
+│
+├── semantic/
+│   └── semantic_model.md
+│
+│
+├── assets/
+│   └── screenshots/
+│
+├── data/
+│   └── README.md
+│
+├── requirements.txt
+├── .gitignore
+├── LICENSE
+└── README.md
+```
 
 ## 5. Measured technical outcomes:
 
