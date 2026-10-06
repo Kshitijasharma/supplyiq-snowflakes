@@ -133,7 +133,8 @@ SupplyIQ/
 
 ## 6. Streamlit Portal:
 
-<img width="914" height="389" alt="image" src="https://github.com/user-attachments/assets/d07fe97b-242e-42e8-815e-18fabea6e2ca" />
+<img width="1175" height="335" alt="image" src="https://github.com/user-attachments/assets/892061e5-fd19-42d7-907a-3b1d60d1709e" />
+
 
 
 Lets test it : 
