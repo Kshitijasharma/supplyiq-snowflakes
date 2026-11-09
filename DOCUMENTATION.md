@@ -198,7 +198,10 @@ SupplyIQ formalizes four canonical supply chain metrics:
 ### 1. Fill Rate (Fulfillment Rate)
 Quantifies procurement fulfillment efficiency: how much of the ordered quantity was successfully delivered by suppliers.
 
-$$\text{Fill Rate (\%)} = \left( \frac{\sum \text{qty\_received}}{\sum \text{qty\_ordered}} \right) \times 100$$
+<img width="350" height="54" alt="image" src="https://github.com/user-attachments/assets/c70b4b0c-6058-4ca2-8c31-e2d302db18dc" />
+
+
+(Measured across 371,897 ordered vs 361,078 received units)
 
 **SQL Implementation**:
 ```sql
@@ -211,9 +214,10 @@ ROUND(
 ### 2. On-Time Delivery (OTD)
 Measures the percentage of inbound deliveries that arrived on or prior to the route's expected receipt date.
 
-$$\text{Expected Date} = \text{Order Date} + \text{Route Mean Lead Time}$$
+<img width="443" height="93" alt="image" src="https://github.com/user-attachments/assets/6cf8ef3b-b54e-432d-89f9-7b02de26762e" />
 
-$$\text{On-Time Delivery (\%)} = \left( \frac{\sum \mathbb{I}(\text{Receipt Date} \le \text{Expected Date})}{\text{Total Received Deliveries}} \right) \times 100$$
+
+(Measured across 3,159 completed PO lines)
 
 **SQL Implementation**:
 ```sql
@@ -226,7 +230,8 @@ ROUND(
 ### 3. Landed Cost
 Calculates the true total cost of acquired goods by incorporating freight and logistics route expenses on top of product procurement purchase costs.
 
-$$\text{Landed Cost} = \sum (\text{qty\_received} \times \text{unit\_cost}) + \sum \text{shipment\_cost}$$
+<img width="379" height="31" alt="image" src="https://github.com/user-attachments/assets/cf872be9-98d1-4dae-af42-1ae2f52a65f2" />
+
 
 **SQL Implementation**:
 ```sql
@@ -236,9 +241,8 @@ ROUND(SUM(landed_cost), 2) AS total_landed_cost
 ### 4. Days of Inventory (DOI)
 Estimates stock runway: the number of days current inventory will satisfy demand assuming historical daily burn rate.
 
-$$\text{Avg Daily Demand} = \frac{\sum_{\text{order\_date}} \text{qty}}{\text{Max(Order Date)} - \text{Min(Order Date)} + 1}$$
+<img width="431" height="56" alt="image" src="https://github.com/user-attachments/assets/eeab03b1-aab0-406d-a0d8-03ca4b65f149" />
 
-$$\text{Days of Inventory} = \frac{\text{On-Hand Qty}}{\text{Avg Daily Demand}}$$
 
 **SQL Implementation**:
 ```sql
